@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    color-scheme: light dark;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root {
+    /* ### Primary */
+    --Orange: hsl(25, 97%, 53%);
+    /* ### Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+    --Btn-Bg: hsl(216, 12%, 8%, 20%);
+}
+
+main {
+    min-height: 100dvh;
+    /* fallback for no support for dvh*/
+    min-height: 100vh;
+    background-color: var(--Very-Dark-Blue);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: system-ui;
+}
+
+h2 {
+    color: var(--White);
+}
+
+p {
+    color: var(--Medium-Grey);
+    max-width: 40ch;
+}
+
+.card {
+    background-color: var(--Dark-Blue);
+    padding: 2rem;
+    border-radius: 2rem;
+    max-width: 90vw;
+}
+
+
+.btn {
+    border-radius: 100%;
+    aspect-ratio: 1;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--Btn-Bg);
+    flex: 1;
+    color: var(--Medium-Grey);
+    cursor: pointer;
+    font-weight: bold;
+    max-width: 50px;
+}
+
+.btn.selected {
+    background-color: var(--Light-Grey);
+    color: var(--White);
+}
+
+.btn:hover {
+    background-color: var(--Orange);
+    color: var(--White);
+}
+
+.star {
+    align-items: center;
+    aspect-ratio: 1;
+    background-color: var(--Btn-Bg);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    max-width: 6vh;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5%;
+    padding: 4% 0;
+}
+
+.card > * {
+    margin-bottom: 5%;
+}
+
+button[type="submit"] {
+    color: var(--White);
+    background-color: var(--Orange);
+    outline: transparent;
+    border-radius: 1.5rem;
+    border: none;
+    padding: .8rem;
+    width: 100%;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+button[type="submit"]:hover {
+    color: var(--Orange);
+    background-color: var(--White);
+}
+
+.card:last-child {
+    display: none;
+}
+
+.card:last-child {
+    text-align: center;
+
+    h2 {
+        padding-top: 5%;
+    }
+}
+
+/* fallback for browsers that don't support the nested selection  */
+.card:last-child h2 {
+    padding-top: 5%;
+}
+
+.selection-result {
+    color: var(--Orange);
+    border-radius: 2rem;
+    background-color: var(--Btn-Bg);
+    padding: .5rem 1rem;
+    display: inline-block;
+    margin: 2% 0;
+}
